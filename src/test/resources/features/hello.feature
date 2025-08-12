@@ -1,3 +1,4 @@
+@r1
 Feature: HLO R1 - say hello
 
  Scenario Outline: greet a person by name
