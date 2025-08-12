@@ -8,4 +8,6 @@ Feature: HLO R1 - say hello
  Examples:
  | name  | message       |
  | Alice | Hello, Alice! |
- | Bob   | Hello, Bob    |
+ | Bob   | Hello, Bob!   |
+ | John  | Hello, John!  |
+ | ""    | Hello, World! |
