@@ -11,16 +11,15 @@ class HelloSteps {
     private lateinit var msg: String
     private val hello = HelloSolution()
 
-    @Given("a friend named {word}")
-    fun aFiendName(n: String) {name = n}
+    @Given("a friend named {string}")
+    fun aFriendName(n: String) { name = n }
 
     @When("I say hello")
-    fun iSayHello() {msg = hello.hello(name)}
+    fun iSayHello() { msg = hello.hello(name) }
 
-    @Then("^the message should be {string}")
+    @Then("the message should be {string}")
     fun theMessageShouldBe(expected: String) {
         Assertions.assertEquals(expected, msg)
     }
-
 }
 
