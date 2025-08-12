@@ -19,6 +19,6 @@ class HelloSteps {
 
     @Then("the message should be {string}")
     fun theMessageShouldBe(expected: String) {
-        Assertions.assertEquals(expected, msg)
+        org.junit.jupiter.api.Assertions.assertEquals(expected, msg, "Expected vs Actual mismatch")
     }
 }
