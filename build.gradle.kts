@@ -25,8 +25,13 @@ dependencies {
 
     testImplementation(kotlin("test"))
 
+    // JUnit 5 BOM keeps versions aligned
+    testImplementation(platform("org.junit:junit-bom:5.10.3"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+
     // JUnit Platform Suite annotations (@Suite, @IncludeEngines, etc.)
     testImplementation("org.junit.platform:junit-platform-suite-api:1.10.3")
+    testRuntimeOnly("org.junit.platform:junit-platform-suite-engine:1.10.3")
 
     // Cucumber engine for JUnit Platform
     testImplementation("io.cucumber:cucumber-java:7.18.1")
@@ -67,5 +72,6 @@ tasks.jacocoTestReport {
         html.required.set(false)
     }
 }
+
 
 
