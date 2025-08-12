@@ -2,10 +2,11 @@ package solutions.HLO
 
 class HelloSolution {
     fun hello(friendName: String): String {
-        val aux = friendName.tr
-        val name = if (friendName.) "World!" else friendName
+        val empty = friendName.replace()
+        val name = if (friendName.isE) "World!" else friendName
         return "Hello, $friendName"
     }
 }
+
 
 
