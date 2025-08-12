@@ -41,8 +41,8 @@ dependencies {
 
 tasks.named<JavaExec>("run") {
     standardInput = System.`in`
-    val action = System.getProperty("action")
-    if (!action.isNullOrBlank()) {
+    val action = System.getProperty("action") // String?
+    if (action != null && action.trim().isNotEmpty()) {
         args(action) // pass single arg if present
     }
 }
@@ -71,5 +71,4 @@ tasks.jacocoTestReport {
         html.required.set(false)
     }
 }
-
 

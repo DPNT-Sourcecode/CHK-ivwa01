@@ -17,4 +17,3 @@ import io.cucumber.junit.platform.engine.Constants
     ]
 )
 class RunCucumberTest
-
