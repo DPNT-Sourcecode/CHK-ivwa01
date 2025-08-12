@@ -41,11 +41,10 @@ dependencies {
 
 tasks.named<JavaExec>("run") {
     standardInput = System.`in`
-
     val action = System.getProperty("action")
-    val actions = action?.let { listOf(it) } ?: emptyList()
-    //noinspection GroovyAssignabilityCheck
-    args(actions)
+    if (!action.isNullOrBlank()) {
+        args(action) // pass single arg if present
+    }
 }
 
 tasks.test {
@@ -72,4 +71,5 @@ tasks.jacocoTestReport {
         html.required.set(false)
     }
 }
+
 
