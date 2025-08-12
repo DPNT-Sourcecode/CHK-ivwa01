@@ -6,8 +6,10 @@ Feature: HLO R1 - say hello
   Then the message should be "<message>"
 
   Examples:
-   | name  | message       |
-   | Alice | Hello, World! |
-   | Bob   | Hello, World! |
-   | John  | Hello, World! |
-   | ""    | Hello, World! |
+   | name      | message       |
+   | Alice     | Hello, World! |
+   | Bob       | Hello, World! |
+   | John      | Hello, World! |
+   | ""        | Hello, World! |
+   | Craftsman | Hello, World! |
+   | Mr. X     | Hello, World! |
