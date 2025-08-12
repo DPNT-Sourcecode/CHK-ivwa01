@@ -4,17 +4,13 @@ import io.cucumber.java.en.Given
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.When
 import org.junit.jupiter.api.Assertions
+import org.junit.jupiter.api.Assertions.assertEquals
 import solutions.HLO.HelloSolution
 
 class HelloSteps {
     private lateinit var name: String
     private lateinit var msg: String
     private val hello = HelloSolution()
-
-    @Given("a friend named \"\"")
-    fun aFriendNamedEmpty() {
-        name = ""
-    }
 
     @Given("^a friend named \"(.*)\"$")
     fun aFriendName(n: String) { name = n }
@@ -24,6 +20,6 @@ class HelloSteps {
 
     @Then("the message should be {string}")
     fun theMessageShouldBe(expected: String) {
-        org.junit.jupiter.api.Assertions.assertEquals(expected, msg, "Expected vs Actual mismatch")
+        assertEquals(expected, msg, "Expected vs Actual mismatch")
     }
 }
