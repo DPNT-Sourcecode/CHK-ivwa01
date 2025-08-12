@@ -11,7 +11,7 @@ class HelloSteps {
     private lateinit var msg: String
     private val hello = HelloSolution()
 
-    @Given("^a friend named \"(.*)\"$")
+    @Given("a friend named {string}")
     fun aFriendName(n: String) { name = n }
 
     @When("I say hello")
