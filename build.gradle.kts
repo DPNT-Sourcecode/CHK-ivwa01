@@ -29,6 +29,9 @@ dependencies {
     testImplementation("io.cucumber:cucumber-java:7.18.1")
     testImplementation("io.cucumber:cucumber-junit-platform-engine:7.18.1")
     testImplementation("io.cucumber:cucumber-picocontainer:7.18.1")
+
+    // JUnit Platform Suite annotations (@Suite, @IncludeEngines, etc.)
+    testImplementation("org.junit.platform:junit-platform-suite-api:1.10.2")
 }
 
 tasks.named<JavaExec>("run") {
@@ -64,4 +67,5 @@ tasks.jacocoTestReport {
         html.required.set(false)
     }
 }
+
 
