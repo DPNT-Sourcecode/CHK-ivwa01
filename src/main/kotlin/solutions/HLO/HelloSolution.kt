@@ -5,4 +5,3 @@ class HelloSolution {
         return "Hello, " + friendName + "!"
     }
 }
-
