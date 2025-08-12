@@ -8,7 +8,7 @@ class HelloSteps {
     private lateinit var msg: String
     private val hello = HelloSolution()
 
-    @Given("a friend named ")
+    @Given("a friend named {")
 
 
 }
