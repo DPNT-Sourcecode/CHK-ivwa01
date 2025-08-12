@@ -37,6 +37,8 @@ dependencies {
     testImplementation("io.cucumber:cucumber-java:7.18.1")
     testImplementation("io.cucumber:cucumber-junit-platform-engine:7.18.1")
     testImplementation("io.cucumber:cucumber-picocontainer:7.18.1")
+
+    implementation(kotlin("stdlib"))
 }
 
 tasks.named<JavaExec>("run") {
@@ -71,4 +73,5 @@ tasks.jacocoTestReport {
         html.required.set(false)
     }
 }
+
 
