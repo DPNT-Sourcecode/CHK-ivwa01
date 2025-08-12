@@ -10,4 +10,3 @@ import org.junit.platform.suite.api.Suite
 @SelectClasspathResource("features")
 @ConfigurationParameter(key = Constants.GLUE_PROPERTY_NAME, value = "bdd.steps")
 class RunCucumberTest
-
