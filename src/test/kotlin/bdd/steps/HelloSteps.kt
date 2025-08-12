@@ -11,6 +11,11 @@ class HelloSteps {
     private lateinit var msg: String
     private val hello = HelloSolution()
 
+    @Given("a friend named \"\"")
+    fun aFriendNamedEmpty() {
+        name = ""
+    }
+
     @Given("^a friend named \"(.*)\"$")
     fun aFriendName(n: String) { name = n }
 
