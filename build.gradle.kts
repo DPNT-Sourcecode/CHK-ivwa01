@@ -41,7 +41,7 @@ dependencies {
 
 tasks.named<JavaExec>("run") {
     standardInput = System.`in`
-    val action = System.getProperty("action") // String?
+    val action = System.getProperty("action")
     if (action != null && action.trim().isNotEmpty()) {
         args(action) // pass single arg if present
     }
