@@ -18,6 +18,8 @@ class HelloSteps {
     fun iSayHello() {msg = hello.hello(name)}
 
     @Then("the message should be {word}")
-    fun theMessageShouldBe(expected: String) { Assertions.assertEquals(expected, msg)}
+    fun theMessageShouldBe(expected: String) {
+        Assertions.assertEquals(expected, msg)
+    }
 
 }
