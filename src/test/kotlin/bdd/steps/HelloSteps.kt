@@ -17,7 +17,7 @@ class HelloSteps {
     @When("I say hello")
     fun iSayHello() {msg = hello.hello(name)}
 
-    @Then("the message should be {word}")
+    @Then("^the message should be (.+)$")
     fun theMessageShouldBe(expected: String) {
         Assertions.assertEquals(expected, msg)
     }
