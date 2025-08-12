@@ -10,6 +10,7 @@ Feature: HLO R2 - say hello to friend
    | Alice     |
    | Bob       |
    | John      |
-   | ""        |
+   |           |
    | Craftsman |
    | Mr. X     |
+
