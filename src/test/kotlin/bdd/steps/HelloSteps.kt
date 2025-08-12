@@ -17,9 +17,10 @@ class HelloSteps {
     @When("I say hello")
     fun iSayHello() {msg = hello.hello(name)}
 
-    @Then("^the message should be (.+)$")
+    @Then("^the message should be {string}")
     fun theMessageShouldBe(expected: String) {
         Assertions.assertEquals(expected, msg)
     }
 
 }
+
