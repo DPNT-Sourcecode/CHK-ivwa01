@@ -22,5 +22,3 @@ class HelloSteps {
         Assertions.assertEquals(expected, msg)
     }
 }
-
-
