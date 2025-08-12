@@ -11,7 +11,7 @@ class HelloSteps {
     private lateinit var msg: String
     private val hello = HelloSolution()
 
-    @Given("a friend named {string}")
+    @Given("^a friend named \"(.*)\"$")
     fun aFriendName(n: String) { name = n }
 
     @When("I say hello")
@@ -22,4 +22,5 @@ class HelloSteps {
         Assertions.assertEquals(expected, msg)
     }
 }
+
 
