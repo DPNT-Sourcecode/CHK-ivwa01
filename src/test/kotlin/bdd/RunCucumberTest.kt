@@ -9,5 +9,4 @@ import org.junit.platform.suite.api.Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features/hello_r2.feature")
 @ConfigurationParameter(key = Constants.GLUE_PROPERTY_NAME, value = "bdd.steps")
-class RunCucumberTestR2
-
+class RunCucumberTest
