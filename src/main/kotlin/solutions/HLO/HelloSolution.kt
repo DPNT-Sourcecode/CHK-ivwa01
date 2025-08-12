@@ -2,12 +2,13 @@ package solutions.HLO
 
 class HelloSolution {
     fun hello(friendName: String): String {
-        if (friendName.length == 0)
+        if (friendName.length == 0 || friendName == "\"\""){
             return "Hello, World!"
-        else
-        return "Hello, $friendName"
+        }
+        return "Hello," + friendName + "!"
     }
 }
+
 
 
 
