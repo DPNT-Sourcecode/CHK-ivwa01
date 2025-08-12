@@ -13,4 +13,3 @@ Feature: HLO R2 - say hello to friend
    |           |
    | Craftsman |
    | Mr. X     |
-
