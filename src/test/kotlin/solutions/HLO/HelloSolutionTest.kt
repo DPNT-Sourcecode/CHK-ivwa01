@@ -5,7 +5,10 @@ import org.junit.jupiter.api.Test
 class HelloSolutionTest {
     @Test
     fun dumpHello() {
-        val result = HelloSolutionR1().hello("Alice")
+        val result = HelloSolutionR2()
+        println("Using class: §{")
+
+        hello("Alice")
         Assertions.assertEquals("Hello, Alice!", result)
     }
 }
