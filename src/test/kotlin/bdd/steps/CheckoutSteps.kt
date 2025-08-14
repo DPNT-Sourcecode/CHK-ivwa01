@@ -42,6 +42,3 @@ class CheckoutSteps {
         assertEquals(expected, result)
     }
 }
-
-
-
