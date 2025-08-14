@@ -52,15 +52,15 @@ class CheckoutSolution {
 
         var total = 0
 
-        // E -> free B (R2/R3)
+        // E -> free B (R2+)
         val freeBsFromE = if (round >= 2) countE / 2 else 0
         val effectiveB = maxOf(0, countB - freeBsFromE)
 
-        // N -> M free (R4): for every 3 N, 1 M free
+        // N -> M free (R4)
         val freeMsFromN = if (round >= 4) countN / 3 else 0
         val effectiveM = maxOf(0, countM - freeMsFromN)
 
-        // R -> Q free (R4): for every 3 R, 1 Q free
+        // R -> Q free (R4)
         val freeQsFromR = if (round >= 4) countR / 3 else 0
         val effectiveQ = maxOf(0, countQ - freeQsFromR)
 
@@ -164,6 +164,7 @@ class CheckoutSolution {
         return total
     }
 }
+
 
 
 
