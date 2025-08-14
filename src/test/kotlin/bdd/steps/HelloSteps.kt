@@ -10,11 +10,18 @@ import solutions.HLO.HelloSolutionR2
 class HelloSteps {
     private lateinit var name: String
     private lateinit var msg: String
-    private val hello = HelloSolutionR1()
+    private var hello: Any? = null
+
+    fun setUpR1(){
+        hello = HelloSolutionR1()
+    }
+
+    fun setUpR2(){
+        hello = HelloSolutionR1()
+    }
 
 
 
-    
     @Given("^a friend named \"(.*)\"$")
     fun aFriendName(n: String) { name = n }
 
@@ -31,3 +38,4 @@ class HelloSteps {
         assertEquals(expected, msg, "Expected vs Actual mismatch")
     }
 }
+
