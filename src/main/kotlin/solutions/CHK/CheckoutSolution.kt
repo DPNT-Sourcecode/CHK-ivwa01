@@ -2,8 +2,9 @@ package solutions.CHK
 
 class CheckoutSolution {
     fun checkout(skus: String?): Int {
-        if(skus.isNullOrEmpty() || skus.any { it !in "ABCD"})
-        return -1
+        if(skus == null) return -1
+        if(skus.isEmpty()) return 0
+        if(skus.any { it !in "ABCD"}) return -1
 
         var total = 0
         val counts = skus.groupingBy { it }.eachCount()
