@@ -5,9 +5,9 @@ class CheckoutSolution {
         if(skus.isNullOrEmpty() || skus.any { it !in "ABCD"})
         return -1
 
-        var total = 0
-        var countA = 130
+        var total: Int = 0
+        var countA: Int = 130
 
-        return total = countA
+        return countA
     }
 }
