@@ -6,7 +6,7 @@ class HelloSolutionTest {
     @Test
     fun dumpHello() {
         val result = HelloSolutionR2()
-        println("Using class: §{")
+        println("Using class: ${instance.javaClass.ca")
 
         hello("Alice")
         Assertions.assertEquals("Hello, Alice!", result)
