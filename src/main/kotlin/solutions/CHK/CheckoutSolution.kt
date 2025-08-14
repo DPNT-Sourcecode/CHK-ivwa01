@@ -17,7 +17,10 @@ class CheckoutSolution {
         val countC = counts.getOrDefault('C',0)
         total += countC * 20
 
-        
+        val countD = counts.getOrDefault('D',0)
+        total += countD * 15
+
+
         return total
     }
 }
