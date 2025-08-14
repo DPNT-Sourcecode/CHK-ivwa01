@@ -103,4 +103,3 @@ Feature: Supermarket Checkout
       | NNNM       | 120  |
       | RRRQ       | 150  |
       | RRRQQQ     | 210  |
-
