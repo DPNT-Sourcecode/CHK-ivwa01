@@ -15,7 +15,13 @@ class HelloSteps {
     fun aFriendName(n: String) { name = n }
 
     @When("I say hello")
-    fun iSayHello() { msg = hello.hello(name) }
+    fun iSayHello() {
+        msg = hello.hello() {
+            is HelloSolutionR1 -> (hello as HelloSolutionR1).hello(name)
+            else -> (hello as HelloSolutionR2)
+        }
+
+        }
 
     @Then("the message should be {string}")
     fun theMessageShouldBe(expected: String) {
