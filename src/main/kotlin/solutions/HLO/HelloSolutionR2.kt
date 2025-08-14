@@ -5,5 +5,3 @@ class HelloSolutionR2 {
         return "Hello, $friendName!"
     }
 }
-
-
