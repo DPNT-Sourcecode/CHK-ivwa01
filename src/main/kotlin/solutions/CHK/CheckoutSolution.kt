@@ -13,7 +13,9 @@ class CheckoutSolution {
         val allowed = when (round) {
             1 -> "ABCD"
             2 -> "ABCDE"
-            else -> "ABCDEF" // R3+
+            3 -> "ABCDEF"
+
+            
         }
         if (skus.any { it !in allowed }) return -1
 
@@ -65,3 +67,4 @@ class CheckoutSolution {
         return total
     }
 }
+
