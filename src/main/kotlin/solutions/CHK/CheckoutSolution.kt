@@ -5,13 +5,13 @@ class CheckoutSolution {
         if(skus.isNullOrEmpty() || skus.any { it !in "ABCD"})
         return -1
 
-        var total: Int = 0
+        var total = 0
         val counts = skus.groupingBy { it }.eachCount()
 
         var countA = counts.getOrDefault('A',0)
-        total = (countA/3)
+        total += (countA / 3) * 130 + (countA / 3)
 
-        return countA
+        return total
     }
 }
 
