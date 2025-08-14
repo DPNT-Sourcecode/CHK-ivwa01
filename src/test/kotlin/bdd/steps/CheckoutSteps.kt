@@ -1,5 +1,6 @@
 package bdd.steps
 
+import io.cucumber.java.Before
 import io.cucumber.java.en.Given
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.When
@@ -9,9 +10,13 @@ import solutions.CHK.CheckoutSolution
 class CheckoutSteps {
     private var skus: String? = null
     private var result: Int = 0
-    private val checkout = CheckoutSolution()
+    private var checkout: Any? = null
 
-    fun setUpR1()
+    @Before("@r1")
+    fun setUpR1() {
+        checkout = CheckoutSolution()
+    }
+
     @Given("a basket with item {string}")
     fun basketWithItem(skus: String?){
             this.skus = skus
@@ -28,7 +33,7 @@ class CheckoutSteps {
     fun calculateTotal(){
         result = when (checkout){
            is CheckoutSolution  -> (checkout as CheckoutSolution).checkout(skus)
-            else -> throw IllegalStateException("Unknown checkout implementation $checkout")
+           else -> throw IllegalStateException("Unknown checkout implementation $checkout")
         }
     }
 
@@ -37,5 +42,6 @@ class CheckoutSteps {
         assertEquals(expected, result)
     }
 }
+
 
 
