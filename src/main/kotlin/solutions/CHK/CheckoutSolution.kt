@@ -2,10 +2,11 @@ package solutions.CHK
 
 class CheckoutSolution {
 
-    // === Public API used by the grader (CHK_R3) ===
-    fun checkout(skus: String?): Int = checkout(skus, 3)
+    // === Public API used by the grader (CHK_R4) ===
+    fun checkout(skus: String?): Int = checkout(skus, 4)
 
-    // === Internal API so your R1/R2/R3 tests can still pick a round ===
+    // === Internal API so your R1/R2/R3/R4 tests can still pick a round ===
+
     fun checkout(skus: String?, round: Int): Int {
         if (skus == null) return -1
         if (skus.isEmpty()) return if (round >= 2) 0 else -1
@@ -26,6 +27,29 @@ class CheckoutSolution {
         val countD = counts.getOrDefault('D', 0)
         val countE = counts.getOrDefault('E', 0)
         val countF = counts.getOrDefault('F', 0)
+
+        val countG = counts.getOrDefault('G', 0)
+        val countH = counts.getOrDefault('H', 0)
+        val countI = counts.getOrDefault('I', 0)
+        val countJ = counts.getOrDefault('J', 0)
+        val countK = counts.getOrDefault('K', 0)
+        val countL = counts.getOrDefault('L', 0)
+        val countM = counts.getOrDefault('M', 0)
+        val countN = counts.getOrDefault('N', 0)
+        val countO = counts.getOrDefault('O', 0)
+        val countP = counts.getOrDefault('P', 0)
+        val countQ = counts.getOrDefault('Q', 0)
+        val countR = counts.getOrDefault('R', 0)
+        val countS = counts.getOrDefault('S', 0)
+        val countT = counts.getOrDefault('T', 0)
+        val countU = counts.getOrDefault('U', 0)
+        val countV = counts.getOrDefault('V', 0)
+        val countW = counts.getOrDefault('W', 0)
+        val countX = counts.getOrDefault('X', 0)
+        val countY = counts.getOrDefault('Y', 0)
+        val countZ = counts.getOrDefault('Z', 0)
+
+
 
         var total = 0
 
@@ -67,5 +91,6 @@ class CheckoutSolution {
         return total
     }
 }
+
 
 
