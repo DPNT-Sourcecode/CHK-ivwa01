@@ -12,12 +12,15 @@ class HelloSteps {
     private lateinit var msg: String
     private val hello = HelloSolutionR1()
 
+
+
+    
     @Given("^a friend named \"(.*)\"$")
     fun aFriendName(n: String) { name = n }
 
     @When("I say hello")
     fun iSayHello() {
-        msg = hello.hello() {
+        msg = when (hello) {
             is HelloSolutionR1 -> (hello as HelloSolutionR1).hello(name)
             else -> (hello as HelloSolutionR2).hello(name)
         }
