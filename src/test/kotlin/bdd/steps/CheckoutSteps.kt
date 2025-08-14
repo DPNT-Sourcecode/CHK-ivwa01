@@ -25,7 +25,9 @@ class CheckoutSteps {
 
     @When("I calculate the total")
     fun calculateTotal(){
-        result = checkout.checkout(skus)
+        result = when (checkout){
+            checkout.checkout(skus)
+    }
     }
 
     @Then("the total should be {int}")
