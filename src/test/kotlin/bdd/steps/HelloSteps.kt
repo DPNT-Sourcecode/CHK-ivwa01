@@ -5,6 +5,7 @@ import io.cucumber.java.en.Then
 import io.cucumber.java.en.When
 import org.junit.jupiter.api.Assertions.assertEquals
 import solutions.HLO.HelloSolutionR1
+import solutions.HLO.HelloSolutionR2
 
 class HelloSteps {
     private lateinit var name: String
@@ -18,13 +19,13 @@ class HelloSteps {
     fun iSayHello() {
         msg = hello.hello() {
             is HelloSolutionR1 -> (hello as HelloSolutionR1).hello(name)
-            else -> (hello as HelloSolutionR2)
+            else -> (hello as HelloSolutionR2).hello(name)
         }
-
-        }
+    }
 
     @Then("the message should be {string}")
     fun theMessageShouldBe(expected: String) {
         assertEquals(expected, msg, "Expected vs Actual mismatch")
     }
 }
+
