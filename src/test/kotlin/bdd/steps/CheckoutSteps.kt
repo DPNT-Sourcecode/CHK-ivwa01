@@ -26,8 +26,9 @@ class CheckoutSteps {
     @When("I calculate the total")
     fun calculateTotal(){
         result = when (checkout){
-            checkout.checkout(skus)
-    }
+           is checkoutSolution -> (checkout as CheckoutSolution).checkout(skus)
+            else -> throw IllegalStateException("Unknown checkout implementation $checkout")
+        }
     }
 
     @Then("the total should be {int}")
@@ -35,3 +36,4 @@ class CheckoutSteps {
         assertEquals(expected, result)
     }
 }
+
