@@ -6,8 +6,12 @@ class CheckoutSolution {
         return -1
 
         var total: Int = 0
-        var countA: Int = 130
+        val counts = skus.groupingBy { it }.eachCount()
+
+        var countA = counts.getOrDefault('A',0)
+        total = (countA/3)
 
         return countA
     }
 }
+
