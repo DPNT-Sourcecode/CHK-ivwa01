@@ -1,5 +1,6 @@
 package bdd.steps
 
+import io.cucumber.java.Before
 import io.cucumber.java.en.Given
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.When
@@ -12,15 +13,15 @@ class HelloSteps {
     private lateinit var msg: String
     private var hello: Any? = null
 
+    @Before("@r1")
     fun setUpR1(){
         hello = HelloSolutionR1()
     }
 
+    @Before("not @r1")
     fun setUpR2(){
         hello = HelloSolutionR1()
     }
-
-
 
     @Given("^a friend named \"(.*)\"$")
     fun aFriendName(n: String) { name = n }
@@ -38,4 +39,5 @@ class HelloSteps {
         assertEquals(expected, msg, "Expected vs Actual mismatch")
     }
 }
+
 
