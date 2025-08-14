@@ -24,6 +24,3 @@ class CheckoutSolution {
         return total
     }
 }
-
-
-
