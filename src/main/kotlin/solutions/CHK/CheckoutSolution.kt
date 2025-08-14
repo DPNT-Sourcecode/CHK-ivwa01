@@ -3,7 +3,9 @@ package solutions.CHK
 class CheckoutSolution {
     fun checkout(skus: String?): Int {
 
-        if(skus.isNullOrEmpty()) return -1
+        if (skus == null) return -1
+
+        if(skus.isEmpty()) return 0
 
         if(skus.any { it !in "ABCDE"}) return -1
 
