@@ -21,7 +21,7 @@ class HelloSteps {
 
     @Before("not @r1")
     fun setUpR2(){
-        hello = HelloSolutionR1()
+        hello = HelloSolutionR2()
     }
 
     @Given("^a friend named \"(.*)\"$")
