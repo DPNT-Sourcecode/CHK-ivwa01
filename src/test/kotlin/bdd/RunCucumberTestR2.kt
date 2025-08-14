@@ -12,4 +12,3 @@ import org.junit.platform.suite.api.Suite
 @ConfigurationParameter(key = Constants.FILTER_TAGS_PROPERTY_NAME, value = "not @r1")
 @ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME, value = "pretty, html:build/reports/cucumber-report-r2.html")
 class RunCucumberTestR2
-
