@@ -56,7 +56,7 @@ Feature: Supermarket Checkout
       | EEB                  | 80    |
       | EEBB                 | 110   |
       | ABCDE                | 155   |
-      | AAAAAEEBAA           | 310   |
+      | AAAAAEEBAA           | 380   |
       | a                    | -1    |
       | ABCDEF               | -1    |
       | -                    | -1    |
