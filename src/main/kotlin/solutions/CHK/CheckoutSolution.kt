@@ -17,6 +17,7 @@ class CheckoutSolution {
         val countC = counts.getOrDefault('C', 0)
         val countD = counts.getOrDefault('D', 0)
         val countE = counts.getOrDefault('E', 0)
+        val countF = counts.getOrDefault('F', 0)
 
         // Apply free B offer for CHK_R2 (2E get one B free)
         val freeBSFromE = if (isR2) countE / 2 else 0
