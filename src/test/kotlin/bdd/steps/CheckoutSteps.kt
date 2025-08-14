@@ -11,18 +11,24 @@ class CheckoutSteps {
     private var skus: String? = null
     private var result: Int = 0
     private var checkout: CheckoutSolution? = null
-    private var isR2: Boolean = false
+    private var round: Int = 1
 
     @Before("@r1")
     fun setUpR1() {
         checkout = CheckoutSolution()
-        isR2 = false
+        round = 1
     }
 
     @Before("@r2")
     fun setUpR2() {
         checkout = CheckoutSolution()
-        isR2 = true
+        round = 2
+    }
+
+    @Before("@r3")
+    fun setUpR3() {
+        checkout = CheckoutSolution()
+        round = 3
     }
 
     @Given("a basket with item {string}")
@@ -40,7 +46,7 @@ class CheckoutSteps {
     @When("I calculate the total")
     fun calculateTotal() {
         result = when (checkout) {
-            is CheckoutSolution -> (checkout as CheckoutSolution).checkout(skus, isR2)
+            is CheckoutSolution -> (checkout as CheckoutSolution).checkout(skus, round)
             else -> throw IllegalStateException("Unknown checkout implementation $checkout")
         }
     }
