@@ -83,3 +83,11 @@ Feature: Supermarket Checkout
       |              | 0     |
       | a            | -1    |
       | ABCDEFG      | -1    |
+
+  @r4
+  Scenario Outline: CHK_R4 - Broad range
+    Given a basket with items "<items>"
+    When I calculate the total
+    Then the total should be <total>
+    Examples:
+
