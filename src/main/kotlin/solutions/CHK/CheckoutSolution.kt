@@ -12,10 +12,11 @@ class CheckoutSolution {
         total += (countA / 3) * 130 + (countA % 3) * 50
 
         val countB = counts.getOrDefault('B',0)
-        total += (countA / 2) * 45 + (countA % 2) * 30
+        total += (countB / 2) * 45 + (countB % 2) * 30
 
         return total
     }
 }
+
 
 
