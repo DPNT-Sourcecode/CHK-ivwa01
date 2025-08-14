@@ -11,6 +11,7 @@ class CheckoutSteps {
     private var result: Int = 0
     private val checkout = CheckoutSolution()
 
+    fun setUpR1()
     @Given("a basket with item {string}")
     fun basketWithItem(skus: String?){
             this.skus = skus
@@ -26,7 +27,7 @@ class CheckoutSteps {
     @When("I calculate the total")
     fun calculateTotal(){
         result = when (checkout){
-           is checkoutSolution -> (checkout as CheckoutSolution).checkout(skus)
+           is CheckoutSolution  -> (checkout as CheckoutSolution).checkout(skus)
             else -> throw IllegalStateException("Unknown checkout implementation $checkout")
         }
     }
@@ -36,4 +37,5 @@ class CheckoutSteps {
         assertEquals(expected, result)
     }
 }
+
 
