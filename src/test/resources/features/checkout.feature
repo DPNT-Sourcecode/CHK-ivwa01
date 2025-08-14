@@ -23,7 +23,7 @@ Feature: CHK R1 - Supermarket checkout
   Scenario: Calculate total for special offers - Mixed items ABC
     Given a basket with items "AAABB"
     When I calculate the total
-    Then the total should be 155
+    Then the total should be 175
 
   Scenario: Invalid input
     Given a basket with items "XYZ"
