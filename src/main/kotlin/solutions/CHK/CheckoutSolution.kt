@@ -19,21 +19,14 @@ class CheckoutSolution {
         val effectiveCountB = maxOf(0, countB - freeBSFromE)
 
         total += (countA / 5) * 200 + ((countA % 5) / 3) * 130 + ((countA % 5) % 3) * 50
-
-        val countA = counts.getOrDefault('A',0)
-        total += (countA / 3) * 130 + (countA % 3) * 50
-
-        val countB = counts.getOrDefault('B',0)
-        total += (countB / 2) * 45 + (countB % 2) * 30
-
-        val countC = counts.getOrDefault('C',0)
+        total += (effectiveCountB / 2) * 45 + (effectiveCountB % 2) * 30
         total += countC * 20
-
-        val countD = counts.getOrDefault('D',0)
         total += countD * 15
+        total += countE * 40
 
         return total
     }
 }
+
 
 
