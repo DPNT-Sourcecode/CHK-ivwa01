@@ -11,5 +11,3 @@ import org.junit.platform.suite.api.Suite
 @ConfigurationParameter(key = Constants.GLUE_PROPERTY_NAME, value = "bdd.steps")
 @ConfigurationParameter(key = Constants.PLUGIN_PROPERTY_NAME, value = "pretty, html:build/reports/cucumber-report.html")
 class RunCucumberTest
-
-
