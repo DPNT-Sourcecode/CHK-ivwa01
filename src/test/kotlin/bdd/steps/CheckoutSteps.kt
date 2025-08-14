@@ -11,13 +11,21 @@ class CheckoutSteps {
     private var skus: String? = null
     private var result: Int = 0
     private var checkout: Any? = null
+    private var isR2: Boolean = false
 
     @Before("@r1")
     fun setUpR1() {
         checkout = CheckoutSolution()
+        isR2 = false
     }
 
-    @Given("a basket with item {string}")
+    @Before("@r2")
+    fun setUpR2() {
+        checkout = CheckoutSolution()
+        isR2 = true
+    }
+
+        @Given("a basket with item {string}")
     fun basketWithItem(skus: String?){
             this.skus = skus
     }
