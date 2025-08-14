@@ -14,8 +14,8 @@ class CheckoutSolution {
             1 -> "ABCD"
             2 -> "ABCDE"
             3 -> "ABCDEF"
+            else -> ('A'..'Z').joinToString("") // R4+
 
-            
         }
         if (skus.any { it !in allowed }) return -1
 
@@ -67,4 +67,5 @@ class CheckoutSolution {
         return total
     }
 }
+
 
