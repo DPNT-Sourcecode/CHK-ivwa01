@@ -10,7 +10,7 @@ import solutions.CHK.CheckoutSolution
 class CheckoutSteps {
     private var skus: String? = null
     private var result: Int = 0
-    private var checkout: Any? = null
+    private var checkout: CheckoutSolution? = null
     private var isR2: Boolean = false
 
     @Before("@r1")
@@ -25,28 +25,28 @@ class CheckoutSteps {
         isR2 = true
     }
 
-        @Given("a basket with item {string}")
-    fun basketWithItem(skus: String?){
-            this.skus = skus
+    @Given("a basket with item {string}")
+    fun basketWithItem(skus: String?) {
+        this.skus = skus
     }
 
     @Given("a basket with items {string}")
-    fun basketWithItems(skus: String?){
+    fun basketWithItems(skus: String?) {
         if (skus != null) {
             this.skus = skus
         }
     }
 
     @When("I calculate the total")
-    fun calculateTotal(){
-        result = when (checkout){
-           is CheckoutSolution  -> (checkout as CheckoutSolution).checkout(skus)
-           else -> throw IllegalStateException("Unknown checkout implementation $checkout")
+    fun calculateTotal() {
+        result = when (checkout) {
+            is CheckoutSolution -> (checkout as CheckoutSolution).checkout(skus, isR2)
+            else -> throw IllegalStateException("Unknown checkout implementation $checkout")
         }
     }
 
     @Then("the total should be {int}")
-    fun totalShouldBe(expected: Int){
+    fun totalShouldBe(expected: Int) {
         assertEquals(expected, result)
     }
 }

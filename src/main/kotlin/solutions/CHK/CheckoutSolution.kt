@@ -6,7 +6,7 @@ class CheckoutSolution {
         if (skus == null || skus.isEmpty()) return -1
 
         if (skus.any { it !in if (isR2) "ABCDE" else "ABCD" }) return -1
-        
+
         var total = 0
         val counts = skus.groupingBy { it }.eachCount()
 
