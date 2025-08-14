@@ -61,3 +61,26 @@ Feature: Supermarket Checkout
       | ABCDEF               | -1    |
       | -                    | -1    |
       |                      | 0     |
+
+  @r3
+  Scenario Outline: CHK_R3 - Basic and special offer pricing with F
+    Given a basket with items "<items>"
+    When I calculate the total
+    Then the total should be <total>
+    Examples:
+      | items        | total |
+      | F            | 10    |
+      | FF           | 20    |
+      | FFF          | 20    |
+      | FFFF         | 30    |
+      | FFFFF        | 40    |
+      | FFFFFF       | 40    |
+      | AAAAA        | 200   |
+      | EEB          | 80    |
+      | EEBF         | 90    |
+      | FFFA         | 70    |
+      | ABCDEF       | 165   |
+      |              | 0     |
+      | a            | -1    |
+      | ABCDEFG      | -1    |
+    
