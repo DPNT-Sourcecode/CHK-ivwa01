@@ -30,8 +30,3 @@ class CheckoutSolution {
         return total
     }
 }
-
-
-
-
-
