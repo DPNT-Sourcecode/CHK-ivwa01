@@ -5,7 +5,7 @@ class CheckoutSolution {
 
         if(skus.isNullOrEmpty()) return -1
 
-        if(skus.any { it !in "ABCD"}) return -1
+        if(skus.any { it !in "ABCDE"}) return -1
 
         var total = 0
         val counts = skus.groupingBy { it }.eachCount()
@@ -20,7 +20,9 @@ class CheckoutSolution {
         val effectiveCountB = maxOf(0, countB - freeBSFromE)
 
         total += (countA / 5) * 200 + ((countA % 5) / 3) * 130 + ((countA % 5) % 3) * 50
+
         total += (effectiveCountB / 2) * 45 + (effectiveCountB % 2) * 30
+
         total += countC * 20
         total += countD * 15
         total += countE * 40
@@ -28,6 +30,7 @@ class CheckoutSolution {
         return total
     }
 }
+
 
 
 
