@@ -10,6 +10,13 @@ class CheckoutSolution {
         val counts = skus.groupingBy { it }.eachCount()
 
         val countA = counts.getOrDefault('A',0)
+        val countB = counts.getOrDefault('B',0)
+        val countC = counts.getOrDefault('C',0)
+        val countD = counts.getOrDefault('D',0)
+        val countE = counts.getOrDefault('E',0)
+
+
+        val countA = counts.getOrDefault('A',0)
         total += (countA / 3) * 130 + (countA % 3) * 50
 
         val countB = counts.getOrDefault('B',0)
