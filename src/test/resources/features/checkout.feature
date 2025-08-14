@@ -60,4 +60,4 @@ Feature: Supermarket Checkout
       | a                    | -1    |
       | ABCDEF               | -1    |
       | -                    | -1    |
-      | ""                   | -1    |
+      | ""                   | 0     |
