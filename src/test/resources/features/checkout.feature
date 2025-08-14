@@ -90,4 +90,17 @@ Feature: Supermarket Checkout
     When I calculate the total
     Then the total should be <total>
     Examples:
+      | items     | total |
+      | H          | 10   |
+      | HHHHH      | 45   |
+      | HHHHHHHHHH | 80   |
+      | K          | 80   |
+      | KK         | 150  |
+      | VVV        | 130  |
+      | VVVVV      | 220  |
+      | UUU        | 120  |
+      | UUUU       | 120  |
+      | NNNM       | 120  |
+      | RRRQ       | 150  |
+      | RRRQQQ     | 210  |
 

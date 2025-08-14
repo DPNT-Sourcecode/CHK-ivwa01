@@ -55,4 +55,10 @@ class CheckoutSteps {
     fun totalShouldBe(expected: Int) {
         assertEquals(expected, result)
     }
+
+    @Before("@r4")
+    fun setUpR4() {
+        checkout = CheckoutSolution()
+        round = 4
+    }
 }
