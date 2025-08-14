@@ -11,9 +11,7 @@ class CheckoutSteps {
 
     @Given("a basket with item {string}")
     fun basketWithItem(skus: String?){
-        if (skus != null) {
             this.skus = skus
-        }
     }
 
     @Given("a basket with items {string}")
@@ -28,8 +26,9 @@ class CheckoutSteps {
         result = checkout.checkout(skus)
     }
 
-    @Then("then total should be {int}")
+    @Then("the total should be {int}")
     fun totalShouldBe(expected: Int){
         assertEquals(expected, result)
     }
 }
+
