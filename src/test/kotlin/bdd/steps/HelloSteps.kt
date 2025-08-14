@@ -3,14 +3,13 @@ package bdd.steps
 import io.cucumber.java.en.Given
 import io.cucumber.java.en.Then
 import io.cucumber.java.en.When
-import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertEquals
-import solutions.HLO.HelloSolution
+import solutions.HLO.HelloSolutionR1
 
 class HelloSteps {
     private lateinit var name: String
     private lateinit var msg: String
-    private val hello = HelloSolution()
+    private val hello = HelloSolutionR1()
 
     @Given("^a friend named \"(.*)\"$")
     fun aFriendName(n: String) { name = n }

@@ -1,7 +1,7 @@
 import io.accelerate.client.queue.abstractions.ParamAccessor
 import solutions.DMO.InventoryItem
 import solutions.SUM.SumSolution
-import solutions.HLO.HelloSolution
+import solutions.HLO.HelloSolutionR1
 import solutions.FIZ.FizzBuzzSolution
 import solutions.CHK.CheckoutSolution
 import solutions.RBT.RabbitHoleSolution
@@ -11,7 +11,7 @@ import solutions.DMO.*
 
 class EntryPointMapping {
     private val sumSolution = SumSolution()
-    private val helloSolution = HelloSolution()
+    private val helloSolution = HelloSolutionR1()
     private val fizzBuzzSolution = FizzBuzzSolution()
     private val checkoutSolution = CheckoutSolution()
     private val rabbitHoleSolution = RabbitHoleSolution()
