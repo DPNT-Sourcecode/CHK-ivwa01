@@ -6,8 +6,8 @@ class CheckoutSolution {
         return -1
 
         var total = 0
+        var countA = 130
 
-
-        return total
+        return total = countA
     }
 }
