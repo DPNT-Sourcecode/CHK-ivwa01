@@ -9,6 +9,13 @@ class CheckoutSteps {
     private var result: Int = 0
     private val checkout = CheckoutSolution()
 
+    @Given("a basket with item {string}")
+    fun basketWithItem(skus: String?){
+        if (skus != null) {
+            this.skus = skus
+        }
+    }
+
     @Given("a basket with items {string}")
     fun basketWithItems(skus: String?){
         if (skus != null) {
@@ -16,7 +23,7 @@ class CheckoutSteps {
         }
     }
 
-    @When("calculate total")
+    @When("I calculate the total")
     fun calculateTotal(){
         result = checkout.checkout(skus)
     }
