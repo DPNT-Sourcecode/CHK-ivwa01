@@ -6,6 +6,6 @@ class HelloSolutionTest {
     @Test
     fun dumpHello() {
         val result = HelloSolution().hello("Alice")
-        Assertions.assertEquals("<<force-fail>>", result)
+        Assertions.assertEquals("Hello, Alice!", result)
     }
 }
