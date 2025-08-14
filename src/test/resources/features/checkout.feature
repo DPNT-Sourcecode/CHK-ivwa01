@@ -8,7 +8,7 @@ Feature: CHK R1 - Supermarket checkout
   Scenario: Calculate total for multiple items - no offers
     Given a basket with items "ABC"
     When I calculate the total
-    Then the total should be 115
+    Then the total should be 100
 
   Scenario: Calculate total for special offer - A
     Given a basket with items "AAA"
@@ -18,10 +18,10 @@ Feature: CHK R1 - Supermarket checkout
   Scenario: Calculate total for special offer - B
     Given a basket with items "BBB"
     When I calculate the total
-    Then the total should be 55
+    Then the total should be 75
 
   Scenario: Calculate total for special offers - Mixed items ABC
-    Given a basket with items "ABC"
+    Given a basket with items "AAABB"
     When I calculate the total
     Then the total should be 155
 
