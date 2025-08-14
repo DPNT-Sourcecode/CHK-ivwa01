@@ -61,4 +61,11 @@ class CheckoutSteps {
         checkout = CheckoutSolution()
         round = 4
     }
+
+    @Before("@r5")
+    fun setUpR5() {
+        checkout = CheckoutSolution()
+        round = 5
+    }
 }
+

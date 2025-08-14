@@ -103,3 +103,20 @@ Feature: Supermarket Checkout
       | NNNM       | 120  |
       | RRRQ       | 150  |
       | RRRQQQ     | 210  |
+
+  @r5
+  Scenario Outline: CHK_R5 - Group offer + price updates
+    Given a basket with items "<items>"
+    When I calculate the total
+    Then the total should be <total>
+    Examples:
+      | items     | total |
+      | K         | 70    |
+      | KK        | 120   |
+      | Z         | 21    |
+      | X         | 17    |
+      | STX       | 45    |
+      | ZSZ       | 45    |
+      | ZZT       | 45    |
+      | ZZZ       | 45    |
+      | ZZZS      | 66    |
