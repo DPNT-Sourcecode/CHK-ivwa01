@@ -34,7 +34,7 @@ class HelloSteps {
         msg = when (hello) {
             is HelloSolutionR1 -> (hello as HelloSolutionR1).hello(name)
             is HelloSolutionR2 -> (hello as HelloSolutionR2).hello(name)
-            else -> throw IllegalStateException("")
+            else -> throw IllegalStateException("Unknown hello implementation $hello")
         }
     }
 
@@ -43,6 +43,7 @@ class HelloSteps {
         assertEquals(expected, msg, "Expected vs Actual mismatch")
     }
 }
+
 
 
 
