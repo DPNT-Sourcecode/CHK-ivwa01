@@ -8,10 +8,14 @@ class CheckoutSolution {
         var total = 0
         val counts = skus.groupingBy { it }.eachCount()
 
-        var countA = counts.getOrDefault('A',0)
-        total += (countA / 3) * 130 + (countA / 3)
+        val countA = counts.getOrDefault('A',0)
+        total += (countA / 3) * 130 + (countA % 3) * 50
+
+        val countB = counts.getOrDefault('B',0)
+        total += (countA / 2) * 45 + (countA % 2) * 30
 
         return total
     }
 }
+
 
