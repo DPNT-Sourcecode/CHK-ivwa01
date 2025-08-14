@@ -7,6 +7,7 @@ import io.cucumber.java.en.When
 import org.junit.jupiter.api.Assertions.assertEquals
 import solutions.HLO.HelloSolutionR1
 import solutions.HLO.HelloSolutionR2
+import java.lang.IllegalStateException
 
 class HelloSteps {
     private lateinit var name: String
@@ -24,13 +25,16 @@ class HelloSteps {
     }
 
     @Given("^a friend named \"(.*)\"$")
-    fun aFriendName(n: String) { name = n }
+    fun aFriendName(n: String) {
+        name = n
+    }
 
     @When("I say hello")
     fun iSayHello() {
         msg = when (hello) {
             is HelloSolutionR1 -> (hello as HelloSolutionR1).hello(name)
-            else -> (hello as HelloSolutionR2).hello(name)
+            is HelloSolutionR2 -> (hello as HelloSolutionR2).hello(name)
+            else -> throw IllegalStateException("")
         }
     }
 
@@ -39,5 +43,6 @@ class HelloSteps {
         assertEquals(expected, msg, "Expected vs Actual mismatch")
     }
 }
+
 
 
