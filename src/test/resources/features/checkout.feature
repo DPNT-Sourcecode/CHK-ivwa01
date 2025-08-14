@@ -83,4 +83,3 @@ Feature: Supermarket Checkout
       |              | 0     |
       | a            | -1    |
       | ABCDEFG      | -1    |
-    
