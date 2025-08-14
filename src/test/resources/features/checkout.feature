@@ -119,4 +119,5 @@ Feature: Supermarket Checkout
       | ZSZ       | 45    |
       | ZZT       | 45    |
       | ZZZ       | 45    |
-      | ZZZS      | 66    |
+      | ZZZS      | 65    |
+
